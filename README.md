@@ -1,2 +1,2 @@
-# rappi_ml_challenge
+# Rappi ML Challenge
 Rappi Machine Learning Chalenge
