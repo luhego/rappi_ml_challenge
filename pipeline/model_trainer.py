@@ -8,6 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
 from logger import setup_logger
+
 logger = setup_logger(__name__)
 
 
@@ -42,11 +43,11 @@ class LinearModel(GenericModel):
         super().__init__(X_train, X_test, y_train, y_test)
         self.model = LinearSVC()
         self.name = "LinearSVC"
+        self.filepath = "../artifacts/linsvc_clf.pkl"
 
     def persist(self):
-        filepath = "../models/linsvc_clf.pkl"
-        logger.info(f"Persisting model {self.name} in {filepath}.")
-        with open(filepath, "wb") as file:
+        logger.info(f"Persisting model {self.name} in {self.filepath}.")
+        with open(self.filepath, "wb") as file:
             pickle.dump(self.model, file)
 
 
@@ -55,11 +56,11 @@ class RandomForestModel(GenericModel):
         super().__init__(X_train, X_test, y_train, y_test)
         self.model = RandomForestClassifier()
         self.name = "RandomForestClassifier"
+        self.filepath = "../artifacts/rf_clf.pkl"
 
     def persist(self):
-        filepath = "../models/rf_clf.pkl"
-        logger.info(f"Persisting model {self.name} in {filepath}.")
-        with open(filepath, "wb") as file:
+        logger.info(f"Persisting model {self.name} in {self.filepath}.")
+        with open(self.filepath, "wb") as file:
             pickle.dump(self.model, file)
 
 

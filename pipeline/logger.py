@@ -1,10 +1,10 @@
 import logging
 
+
 def setup_logger(name):
     logging.basicConfig(level="INFO")
 
     logger = logging.getLogger(name)
-
 
     c_handler = logging.StreamHandler()
     f_handler = logging.FileHandler("pipeline.log")
