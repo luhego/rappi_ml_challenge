@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+  pipeline:
+    build: pipeline/
+    image: rappi/pipeline
+    command: python run_pipeline.py
+    volumes:
+      - ./pipeline/:/pipeline/
+      - ./data/:/data/
+      - ./models/:/models/
