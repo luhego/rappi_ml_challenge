@@ -9,4 +9,3 @@ WORKDIR /code
 ADD . /code/
 RUN ls /code
 
-EXPOSE 3000

@@ -7,4 +7,14 @@ services:
     volumes:
       - ./pipeline/:/pipeline/
       - ./data/:/data/
-      - ./models/:/models/
+      - ./artifacts/:/artifacts/
+
+  api:
+    build: .
+    volumes:
+      - ./api/:/api/
+      - ./pipeline/:/pipeline/
+      - ./data/:/data/
+      - ./artifacts/:/artifacts/
+    ports:
+      - 5000:5000
