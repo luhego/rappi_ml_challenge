@@ -11,12 +11,13 @@ def init():
     df = DataImputer(df).transform()
     df = FeatureExtractor(df).transform()
 
-    X = df.drop('Survived', axis=1)
+    X = df.drop("Survived", axis=1)
     y = df.Survived
 
     mt = ModelTrainer(X, y)
     mt.train()
     mt.persist()
+
 
 if __name__ == "__main__":
     init()
