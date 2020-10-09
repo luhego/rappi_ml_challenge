@@ -10,9 +10,10 @@ def init():
     df = DataCleaner(df).clean()
     df = DataImputer(df).transform()
     df = FeatureExtractor(df).transform()
+
     X = df.drop('Survived', axis=1)
     y = df.Survived
-    print(df.head())
+
     mt = ModelTrainer(X, y)
     mt.train()
     mt.persist()

@@ -2,7 +2,7 @@ import pandas as pd
 
 
 class DataLoader:
-    """It loads the dataset and return a pandas dataframe."""
+    """Loads the dataset and returns a dataframe."""
 
     def __init__(self, filepath):
         self.filepath = filepath

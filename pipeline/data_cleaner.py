@@ -1,5 +1,5 @@
 class DataCleaner:
-    """It received a pandas dataframe and return a cleaned version."""
+    """Cleans the received dataframe."""
 
     def __init__(self, df):
         self.df = df

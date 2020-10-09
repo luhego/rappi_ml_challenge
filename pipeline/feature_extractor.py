@@ -2,6 +2,7 @@ import pandas as pd
 
 
 class DummyCreator:
+    """Generates dummy columns for a given column. The original column is dropped."""
     def __init__(self, column, prefix=None):
         self.column = column
         self.prefix = prefix
@@ -15,6 +16,7 @@ class DummyCreator:
 
 
 class FeatureExtractor:
+    """Extracts additional features for the training dataframe."""
     def __init__(self, df):
         self.df = df
         self.extractors = [

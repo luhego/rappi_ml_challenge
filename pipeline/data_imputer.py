@@ -1,5 +1,5 @@
 class AgeImputer:
-    """It fill missing age rows with the Age median"""
+    """Fills missing age rows with the Age median"""
 
     def transform(self, df):
         df.Age = df.Age.fillna(df.Age.median())
@@ -7,7 +7,7 @@ class AgeImputer:
 
 
 class EmbarkedImputer:
-    """It fills missing Embarked values with the Embarked mode."""
+    """Fills missing Embarked values with the Embarked mode."""
 
     def transform(self, df):
         df.Embarked = df.Embarked.fillna('S')
