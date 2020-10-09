@@ -7,7 +7,9 @@ from sklearn.svm import LinearSVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
-from logger import logger
+from logger import setup_logger
+logger = setup_logger(__name__)
+
 
 TEST_SIZE = 0.20
 RANDOM_STATE = 23
